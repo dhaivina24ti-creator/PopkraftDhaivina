@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true"
+    android:scrollbars="vertical"
+    tools:context=".pertemuan6.EmpatFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pilihan Musik"
+            android:textSize="16sp"
+            android:textColor="@color/dark_purple"
+            android:fontFamily="@font/poppins_semibold"/>
+
+        <!-- Event 1: Mini Concert Labuai -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="140dp"
+            android:layout_marginTop="12dp"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_card">
+
+            <ImageView
+                android:layout_width="105dp"
+                android:layout_height="115dp"
+                android:src="@drawable/miniconcert"
+                android:scaleType="centerCrop"
+                android:contentDescription="Mini Concert Labuai"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mini Concert Labuai"
+                    android:textSize="12sp"
+                    android:textColor="@color/dark_purple"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="20 Oktober 2026"
+                    android:textSize="10sp"
+                    android:textColor="@color/gray_text"
+                    android:fontFamily="@font/inter_regular"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pekanbaru"
+                    android:textSize="10sp"
+                    android:textColor="@color/gray_text"
+                    android:fontFamily="@font/inter_regular"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Rp45.000 / orang"
+                    android:textSize="12sp"
+                    android:textColor="@color/purple"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <Button
+                    android:id="@+id/btnEvent1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Lihat Detail"
+                    android:textAllCaps="false"
+                    android:textSize="11sp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/purple"
+                    android:fontFamily="@font/poppins_semibold"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Event 2: Sore Akustik Lokal -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="140dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_card">
+
+            <ImageView
+                android:layout_width="105dp"
+                android:layout_height="115dp"
+                android:src="@drawable/akustik"
+                android:scaleType="centerCrop"
+                android:contentDescription="Sore Akustik Lokal"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sore Akustik Lokal"
+                    android:textSize="12sp"
+                    android:textColor="@color/dark_purple"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="31 Oktober 2026"
+                    android:textSize="10sp"
+                    android:textColor="@color/gray_text"
+                    android:fontFamily="@font/inter_regular"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kedai Kala"
+                    android:textSize="10sp"
+                    android:textColor="@color/gray_text"
+                    android:fontFamily="@font/inter_regular"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Rp25.000 / orang"
+                    android:textSize="12sp"
+                    android:textColor="@color/purple"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <Button
+                    android:id="@+id/btnEvent2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Lihat Detail"
+                    android:textAllCaps="false"
+                    android:textSize="11sp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/purple"
+                    android:fontFamily="@font/poppins_semibold"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Event 3: Malam Musik Indie -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="140dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_card">
+
+            <ImageView
+                android:layout_width="105dp"
+                android:layout_height="115dp"
+                android:src="@drawable/indie"
+                android:scaleType="centerCrop"
+                android:contentDescription="Malam Musik Indie"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Malam Musik Indie"
+                    android:textSize="12sp"
+                    android:textColor="@color/dark_purple"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="7 November 2026"
+                    android:textSize="10sp"
+                    android:textColor="@color/gray_text"
+                    android:fontFamily="@font/inter_regular"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ruang Temu"
+                    android:textSize="10sp"
+                    android:textColor="@color/gray_text"
+                    android:fontFamily="@font/inter_regular"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Rp45.000 / orang"
+                    android:textSize="12sp"
+                    android:textColor="@color/purple"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <Button
+                    android:id="@+id/btnEvent3"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Lihat Detail"
+                    android:textAllCaps="false"
+                    android:textSize="11sp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/purple"
+                    android:fontFamily="@font/poppins_semibold"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Event 4: Jazz di Halaman -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="140dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_card">
+
+            <ImageView
+                android:layout_width="105dp"
+                android:layout_height="115dp"
+                android:src="@drawable/jazz"
+                android:scaleType="centerCrop"
+                android:contentDescription="Jazz di Halaman"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Jazz di Halaman"
+                    android:textSize="12sp"
+                    android:textColor="@color/dark_purple"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="8 November 2026"
+                    android:textSize="10sp"
+                    android:textColor="@color/gray_text"
+                    android:fontFamily="@font/inter_regular"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kopi Sela"
+                    android:textSize="10sp"
+                    android:textColor="@color/gray_text"
+                    android:fontFamily="@font/inter_regular"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Rp40.000 / orang"
+                    android:textSize="12sp"
+                    android:textColor="@color/purple"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <Button
+                    android:id="@+id/btnEvent4"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Lihat Detail"
+                    android:textAllCaps="false"
+                    android:textSize="11sp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/purple"
+                    android:fontFamily="@font/poppins_semibold"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Event 5: Festival Band Lokal -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="140dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_card">
+
+            <ImageView
+                android:layout_width="105dp"
+                android:layout_height="115dp"
+                android:src="@drawable/bandlokal"
+                android:scaleType="centerCrop"
+                android:contentDescription="Festival Band Lokal"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Festival Band Lokal"
+                    android:textSize="12sp"
+                    android:textColor="@color/dark_purple"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="15 November 2026"
+                    android:textSize="10sp"
+                    android:textColor="@color/gray_text"
+                    android:fontFamily="@font/inter_regular"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pekanbaru"
+                    android:textSize="10sp"
+                    android:textColor="@color/gray_text"
+                    android:fontFamily="@font/inter_regular"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Rp50.000 / orang"
+                    android:textSize="12sp"
+                    android:textColor="@color/purple"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <Button
+                    android:id="@+id/btnEvent5"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Lihat Detail"
+                    android:textAllCaps="false"
+                    android:textSize="11sp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/purple"
+                    android:fontFamily="@font/poppins_semibold"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Event 6: Pentas Musik Kreatif -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="140dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_card">
+
+            <ImageView
+                android:layout_width="105dp"
+                android:layout_height="115dp"
+                android:src="@drawable/pentasseni"
+                android:scaleType="centerCrop"
+                android:contentDescription="Pentas Musik Kreatif"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pentas Musik Kreatif"
+                    android:textSize="12sp"
+                    android:textColor="@color/dark_purple"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="22 November 2026"
+                    android:textSize="10sp"
+                    android:textColor="@color/gray_text"
+                    android:fontFamily="@font/inter_regular"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Taman Kota"
+                    android:textSize="10sp"
+                    android:textColor="@color/gray_text"
+                    android:fontFamily="@font/inter_regular"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Rp35.000 / orang"
+                    android:textSize="12sp"
+                    android:textColor="@color/purple"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <Button
+                    android:id="@+id/btnEvent6"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Lihat Detail"
+                    android:textAllCaps="false"
+                    android:textSize="11sp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/purple"
+                    android:fontFamily="@font/poppins_semibold"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

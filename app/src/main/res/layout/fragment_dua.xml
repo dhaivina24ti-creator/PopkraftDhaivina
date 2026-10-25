@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pilihan Pop-up Market"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/dark_purple"/>
+
+        <!-- Kreatif Market Riau -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="140dp"
+            android:layout_marginTop="12dp"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_card">
+
+            <ImageView
+                android:layout_width="105dp"
+                android:layout_height="115dp"
+                android:src="@drawable/kreatif"
+                android:scaleType="centerCrop"
+                android:contentDescription="Kreatif Market Riau"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kreatif Market Riau"
+                    android:textSize="12sp"
+                    android:textColor="@color/dark_purple"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="12 - 14 Oktober 2026"
+                    android:textSize="10sp"
+                    android:textColor="@color/gray_text"
+                    android:fontFamily="@font/inter_regular"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Taman Labuai, Pekanbaru"
+                    android:textSize="10sp"
+                    android:textColor="@color/gray_text"
+                    android:fontFamily="@font/inter_regular"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Rp35.000 / orang"
+                    android:textSize="12sp"
+                    android:textColor="@color/purple"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <Button
+                    android:id="@+id/btnEvent1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Lihat Detail"
+                    android:textAllCaps="false"
+                    android:textSize="11sp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/purple"
+                    android:fontFamily="@font/poppins_semibold"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Bazar Karya Lokal -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="140dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_card">
+
+            <ImageView
+                android:layout_width="105dp"
+                android:layout_height="115dp"
+                android:src="@drawable/bazaar"
+                android:scaleType="centerCrop"
+                android:contentDescription="Bazar Karya Lokal"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bazar Karya Lokal"
+                    android:textSize="12sp"
+                    android:textColor="@color/dark_purple"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1 November 2026"
+                    android:textSize="10sp"
+                    android:textColor="@color/gray_text"
+                    android:fontFamily="@font/inter_regular"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lapangan Purna MTQ"
+                    android:textSize="10sp"
+                    android:textColor="@color/gray_text"
+                    android:fontFamily="@font/inter_regular"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Rp20.000 / orang"
+                    android:textSize="12sp"
+                    android:textColor="@color/purple"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <Button
+                    android:id="@+id/btnEvent2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Lihat Detail"
+                    android:textAllCaps="false"
+                    android:textSize="11sp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/purple"
+                    android:fontFamily="@font/poppins_semibold"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Pasar Akhir Pekan -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="140dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_card">
+
+            <ImageView
+                android:layout_width="105dp"
+                android:layout_height="115dp"
+                android:src="@drawable/pasar"
+                android:scaleType="centerCrop"
+                android:contentDescription="Pasar Akhir Pekan"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pasar Akhir Pekan"
+                    android:textSize="12sp"
+                    android:textColor="@color/dark_purple"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="7 November 2026"
+                    android:textSize="10sp"
+                    android:textColor="@color/gray_text"
+                    android:fontFamily="@font/inter_regular"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rumah Komunitas"
+                    android:textSize="10sp"
+                    android:textColor="@color/gray_text"
+                    android:fontFamily="@font/inter_regular"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Rp15.000 / orang"
+                    android:textSize="12sp"
+                    android:textColor="@color/purple"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <Button
+                    android:id="@+id/btnEvent3"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Lihat Detail"
+                    android:textAllCaps="false"
+                    android:textSize="11sp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/purple"
+                    android:fontFamily="@font/poppins_semibold"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Festival UMKM Kreatif -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="140dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_card">
+
+            <ImageView
+                android:layout_width="105dp"
+                android:layout_height="115dp"
+                android:src="@drawable/festival"
+                android:scaleType="centerCrop"
+                android:contentDescription="Festival UMKM Kreatif"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Festival UMKM Kreatif"
+                    android:textSize="12sp"
+                    android:textColor="@color/dark_purple"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="14 November 2026"
+                    android:textSize="10sp"
+                    android:textColor="@color/gray_text"
+                    android:fontFamily="@font/inter_regular"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pekanbaru"
+                    android:textSize="10sp"
+                    android:textColor="@color/gray_text"
+                    android:fontFamily="@font/inter_regular"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Rp25.000 / orang"
+                    android:textSize="12sp"
+                    android:textColor="@color/purple"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <Button
+                    android:id="@+id/btnEvent4"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Lihat Detail"
+                    android:textAllCaps="false"
+                    android:textSize="11sp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/purple"
+                    android:fontFamily="@font/poppins_semibold"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Art Market Pekanbaru -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="140dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_card">
+
+            <ImageView
+                android:layout_width="105dp"
+                android:layout_height="115dp"
+                android:src="@drawable/art"
+                android:scaleType="centerCrop"
+                android:contentDescription="Art Market Pekanbaru"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Art Market Pekanbaru"
+                    android:textSize="12sp"
+                    android:textColor="@color/dark_purple"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="21 November 2026"
+                    android:textSize="10sp"
+                    android:textColor="@color/gray_text"
+                    android:fontFamily="@font/inter_regular"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Galeri Seni"
+                    android:textSize="10sp"
+                    android:textColor="@color/gray_text"
+                    android:fontFamily="@font/inter_regular"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Rp30.000 / orang"
+                    android:textSize="12sp"
+                    android:textColor="@color/purple"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <Button
+                    android:id="@+id/btnEvent5"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Lihat Detail"
+                    android:textAllCaps="false"
+                    android:textSize="11sp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/purple"
+                    android:fontFamily="@font/poppins_semibold"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Pasar Seni Lokal -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="140dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_card">
+
+            <ImageView
+                android:layout_width="105dp"
+                android:layout_height="115dp"
+                android:src="@drawable/pasarseni"
+                android:scaleType="centerCrop"
+                android:contentDescription="Pasar Seni Lokal"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pasar Seni Lokal"
+                    android:textSize="12sp"
+                    android:textColor="@color/dark_purple"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="28 November 2026"
+                    android:textSize="10sp"
+                    android:textColor="@color/gray_text"
+                    android:fontFamily="@font/inter_regular"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Taman Kreatif"
+                    android:textSize="10sp"
+                    android:textColor="@color/gray_text"
+                    android:fontFamily="@font/inter_regular"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Rp15.000 / orang"
+                    android:textSize="12sp"
+                    android:textColor="@color/purple"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <Button
+                    android:id="@+id/btnEvent6"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Lihat Detail"
+                    android:textAllCaps="false"
+                    android:textSize="11sp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/purple"
+                    android:fontFamily="@font/poppins_semibold"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/background"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtTitleBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:text="Detail Event"
+            android:textColor="@color/dark_purple"
+            android:textSize="16sp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toTopOf="@id/bottomHarga"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/imgEvent"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:contentDescription="Gambar Event"
+                android:scaleType="centerCrop"
+                android:src="@drawable/market" />
+
+            <TextView
+                android:id="@+id/txtNamaEvent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Kreatif Market Riau"
+                android:textSize="23sp"
+                android:textColor="@color/dark_purple"
+                android:fontFamily="@font/poppins_bold"/>
+
+            <TextView
+                android:id="@+id/txtKategori"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:padding="10dp"
+                android:background="@drawable/bg_input"
+                android:text="Pop-up Market"
+                android:textSize="12sp"
+                android:textColor="@color/purple"
+                android:fontFamily="@font/poppins_semibold"/>
+
+            <TextView
+                android:id="@+id/txtTanggal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="12 - 14 Oktober 2026"
+                android:textSize="13sp"
+                android:textColor="@color/gray_text"
+                android:fontFamily="@font/inter_regular"/>
+
+            <TextView
+                android:id="@+id/txtLokasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Taman Labuai, Pekanbaru"
+                android:textSize="13sp"
+                android:textColor="@color/gray_text"
+                android:fontFamily="@font/inter_regular"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
+                android:background="@color/border"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Tentang Event"
+                android:textSize="16sp"
+                android:textColor="@color/dark_purple"
+                android:fontFamily="@font/poppins_semibold"/>
+
+            <TextView
+                android:id="@+id/txtDeskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:lineSpacingExtra="5dp"
+                android:text="Temukan berbagai kegiatan kreatif dan karya menarik."
+                android:textSize="13sp"
+                android:textColor="@color/gray_text"
+                android:fontFamily="@font/inter_regular"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Harga dan tombol pesan tiket -->
+    <LinearLayout
+        android:id="@+id/bottomHarga"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Harga per orang"
+                android:textSize="11sp"
+                android:textColor="@color/gray_text"
+                android:fontFamily="@font/inter_regular"/>
+
+            <TextView
+                android:id="@+id/txtHarga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="Rp35.000"
+                android:textSize="18sp"
+                android:textColor="@color/dark_purple"
+                android:fontFamily="@font/poppins_bold"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnBeliTiket"
+            android:layout_width="155dp"
+            android:layout_height="52dp"
+            android:text="Pesan tiket"
+            android:textAllCaps="false"
+            android:textSize="13sp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/purple"
+            android:fontFamily="@font/poppins_semibold"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

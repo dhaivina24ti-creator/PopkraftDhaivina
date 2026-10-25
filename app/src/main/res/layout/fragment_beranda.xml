@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <!-- SAPAAN PENGGUNA -->
+    <TextView
+        android:id="@+id/txtWelcome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Hai, Kreator!"
+        android:textColor="@color/dark_purple"
+        android:textSize="21sp"
+        app:layout_constraintEnd_toStartOf="@id/btnLogout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- TOMBOL LOGOUT -->
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/purple"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Logout"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- SUBTITLE -->
+    <TextView
+        android:id="@+id/txtSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/inter_regular"
+        android:text="Temukan event kreatif di sekitarmu"
+        android:textColor="@color/gray_text"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/txtWelcome"
+        app:layout_constraintTop_toBottomOf="@id/txtWelcome" />
+
+    <!-- KOLOM PENCARIAN -->
+    <EditText
+        android:id="@+id/edtSearch"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_input"
+        android:hint="Cari event, tempat atau kategori..."
+        android:inputType="text"
+        android:singleLine="true"
+        android:paddingHorizontal="16dp"
+        android:textSize="12sp"
+        android:textColor="@color/dark_purple"
+        android:textColorHint="@color/gray_text"
+        android:fontFamily="@font/inter_regular"
+        app:layout_constraintTop_toBottomOf="@id/txtSubtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- SCROLL KATEGORI -->
+    <HorizontalScrollView
+        android:id="@+id/scrollKategori"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:scrollbars="none"
+        app:layout_constraintTop_toBottomOf="@id/edtSearch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- KATEGORI SEMUA -->
+            <Button
+                android:id="@+id/btnSemua"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:text="Semua"
+                android:textAllCaps="false"
+                android:textSize="11sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:backgroundTint="@color/purple" />
+
+            <!-- KATEGORI POP-UP MARKET -->
+            <Button
+                android:id="@+id/btnMarket"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_marginStart="5dp"
+                android:text="Pop-up Market"
+                android:textAllCaps="false"
+                android:textSize="11sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:backgroundTint="@color/light_purple" />
+
+            <!-- KATEGORI WORKSHOP -->
+            <Button
+                android:id="@+id/btnWorkshop"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_marginStart="5dp"
+                android:text="Workshop"
+                android:textAllCaps="false"
+                android:textSize="11sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:backgroundTint="@color/light_purple" />
+
+            <!-- KATEGORI MUSIK -->
+            <Button
+                android:id="@+id/btnMusik"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_marginStart="5dp"
+                android:text="Musik"
+                android:textAllCaps="false"
+                android:textSize="11sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:backgroundTint="@color/light_purple" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- TOMBOL LIHAT SEMUA KATEGORI (BARU) -->
+    <TextView
+        android:id="@+id/txtLihatSemua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:text="Lihat Semua Kategori →"
+        android:textColor="@color/purple"
+        android:textSize="12sp"
+        android:fontFamily="@font/poppins_semibold"
+        android:padding="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@id/scrollKategori"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- TEMPAT MENAMPILKAN FRAGMENT EVENT -->
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/txtLihatSemua"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

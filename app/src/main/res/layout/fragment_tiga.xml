@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true"
+    android:scrollbars="vertical"
+    tools:context=".pertemuan6.TigaFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pilihan Workshop"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/dark_purple"/>
+
+        <!-- Event 1: Workshop Keramik -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="140dp"
+            android:layout_marginTop="12dp"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_card">
+
+            <ImageView
+                android:layout_width="105dp"
+                android:layout_height="115dp"
+                android:src="@drawable/keramik"
+                android:scaleType="centerCrop"
+                android:contentDescription="Workshop Keramik"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Workshop Keramik"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/dark_purple"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="25 Oktober 2026"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/inter_regular"
+                    android:textColor="@color/gray_text"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Studio Tanah"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/inter_regular"
+                    android:textColor="@color/gray_text"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Rp85.000 / orang"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/purple"/>
+
+                <Button
+                    android:id="@+id/btnEvent1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Lihat Detail"
+                    android:textAllCaps="false"
+                    android:textSize="11sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:backgroundTint="@color/purple"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Event 2: Lukis Tote Bag -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="140dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_card">
+
+            <ImageView
+                android:layout_width="105dp"
+                android:layout_height="115dp"
+                android:src="@drawable/lukistotebag"
+                android:scaleType="centerCrop"
+                android:contentDescription="Lukis Tote Bag"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lukis Tote Bag"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/dark_purple"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1 November 2026"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/inter_regular"
+                    android:textColor="@color/gray_text"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ruang Rupa"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/inter_regular"
+                    android:textColor="@color/gray_text"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Rp65.000 / orang"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/purple"/>
+
+                <Button
+                    android:id="@+id/btnEvent2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Lihat Detail"
+                    android:textAllCaps="false"
+                    android:textSize="11sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:backgroundTint="@color/purple"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Event 3: Merangkai Manik -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="140dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_card">
+
+            <ImageView
+                android:layout_width="105dp"
+                android:layout_height="115dp"
+                android:src="@drawable/manik"
+                android:scaleType="centerCrop"
+                android:contentDescription="Merangkai Manik"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Merangkai Manik"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/dark_purple"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="7 November 2026"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/inter_regular"
+                    android:textColor="@color/gray_text"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Studio Rona"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/inter_regular"
+                    android:textColor="@color/gray_text"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Rp55.000 / orang"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/purple"/>
+
+                <Button
+                    android:id="@+id/btnEvent3"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Lihat Detail"
+                    android:textAllCaps="false"
+                    android:textSize="11sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:backgroundTint="@color/purple"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Event 4: Workshop Melukis -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="140dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_card">
+
+            <ImageView
+                android:layout_width="105dp"
+                android:layout_height="115dp"
+                android:src="@drawable/lukis"
+                android:scaleType="centerCrop"
+                android:contentDescription="Workshop Melukis"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Workshop Melukis"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/dark_purple"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="14 November 2026"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/inter_regular"
+                    android:textColor="@color/gray_text"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Galeri Seni"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/inter_regular"
+                    android:textColor="@color/gray_text"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Rp75.000 / orang"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/purple"/>
+
+                <Button
+                    android:id="@+id/btnEvent4"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Lihat Detail"
+                    android:textAllCaps="false"
+                    android:textSize="11sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:backgroundTint="@color/purple"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Event 5: Kelas Membatik -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="140dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_card">
+
+            <ImageView
+                android:layout_width="105dp"
+                android:layout_height="115dp"
+                android:src="@drawable/membatik"
+                android:scaleType="centerCrop"
+                android:contentDescription="Kelas Membatik"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kelas Membatik"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/dark_purple"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="21 November 2026"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/inter_regular"
+                    android:textColor="@color/gray_text"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rumah Kreatif"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/inter_regular"
+                    android:textColor="@color/gray_text"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Rp60.000 / orang"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/purple"/>
+
+                <Button
+                    android:id="@+id/btnEvent5"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Lihat Detail"
+                    android:textAllCaps="false"
+                    android:textSize="11sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:backgroundTint="@color/purple"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Event 6: Kelas Fotografi -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="140dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_card">
+
+            <ImageView
+                android:layout_width="105dp"
+                android:layout_height="115dp"
+                android:src="@drawable/fotografi"
+                android:scaleType="centerCrop"
+                android:contentDescription="Kelas Fotografi"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kelas Fotografi"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/dark_purple"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="28 November 2026"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/inter_regular"
+                    android:textColor="@color/gray_text"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Creative Space"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/inter_regular"
+                    android:textColor="@color/gray_text"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Rp90.000 / orang"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/purple"/>
+
+                <Button
+                    android:id="@+id/btnEvent6"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Lihat Detail"
+                    android:textAllCaps="false"
+                    android:textSize="11sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:backgroundTint="@color/purple"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
