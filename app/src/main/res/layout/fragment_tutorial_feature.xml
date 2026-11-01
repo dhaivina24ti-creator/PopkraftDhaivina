@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/txtLogoKecil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PopKraf"
+        android:textSize="22sp"
+        android:textColor="@color/purple"
+        android:fontFamily="@font/poppins_bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgTutorial"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="24dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="Ilustrasi fitur PopKraf"
+        app:shapeAppearanceOverlay="@style/PopKrafRoundedImage"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toBottomOf="@id/txtLogoKecil"
+        app:layout_constraintBottom_toTopOf="@id/txtJudulTutorial"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtJudulTutorial"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Judul Tutorial"
+        android:textSize="23sp"
+        android:textColor="@color/dark_purple"
+        android:fontFamily="@font/poppins_bold"
+        app:layout_constraintTop_toBottomOf="@id/imgTutorial"
+        app:layout_constraintBottom_toTopOf="@id/txtDeskripsiTutorial"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtDeskripsiTutorial"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="Deskripsi fitur PopKraf"
+        android:textSize="14sp"
+        android:textColor="@color/gray_text"
+        android:fontFamily="@font/inter_regular"
+        app:layout_constraintTop_toBottomOf="@id/txtJudulTutorial"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

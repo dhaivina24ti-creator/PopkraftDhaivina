@@ -7,58 +7,70 @@
     android:layout_height="match_parent"
     android:background="@color/background">
 
-    <!-- SAPAAN PENGGUNA -->
+    <!-- BACKGROUND HEADER WAVE -->
+    <View
+        android:id="@+id/background_header"
+        android:layout_width="0dp"
+        android:layout_height="195dp"
+        android:background="@drawable/bg_header_wave"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- SAPAAN -->
     <TextView
         android:id="@+id/txtWelcome"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="10dp"
-        android:fontFamily="@font/poppins_bold"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="8dp"
         android:text="Hai, Kreator!"
-        android:textColor="@color/dark_purple"
+        android:textColor="@color/white"
         android:textSize="21sp"
-        app:layout_constraintEnd_toStartOf="@id/btnLogout"
+        android:fontFamily="@font/poppins_bold"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toStartOf="@id/btnLogout" />
 
-    <!-- TOMBOL LOGOUT -->
+    <!-- LOGOUT -->
     <Button
         android:id="@+id/btnLogout"
         android:layout_width="wrap_content"
         android:layout_height="42dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="54dp"
         android:layout_marginEnd="16dp"
-        android:backgroundTint="@color/purple"
-        android:fontFamily="@font/poppins_semibold"
         android:text="Logout"
         android:textAllCaps="false"
-        android:textColor="@color/white"
         android:textSize="11sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textColor="@color/white"
+        android:backgroundTint="@color/orange"
+        android:fontFamily="@font/poppins_semibold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <!-- SUBTITLE -->
     <TextView
         android:id="@+id/txtSubtitle"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/inter_regular"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
         android:text="Temukan event kreatif di sekitarmu"
-        android:textColor="@color/gray_text"
+        android:textColor="@color/white"
         android:textSize="12sp"
+        android:fontFamily="@font/inter_regular"
+        app:layout_constraintTop_toBottomOf="@id/txtWelcome"
         app:layout_constraintStart_toStartOf="@id/txtWelcome"
-        app:layout_constraintTop_toBottomOf="@id/txtWelcome" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- KOLOM PENCARIAN -->
+    <!-- PENCARIAN -->
     <EditText
         android:id="@+id/edtSearch"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/bg_input"
         android:hint="Cari event, tempat atau kategori..."
         android:inputType="text"
@@ -68,83 +80,84 @@
         android:textColor="@color/dark_purple"
         android:textColorHint="@color/gray_text"
         android:fontFamily="@font/inter_regular"
-        app:layout_constraintTop_toBottomOf="@id/txtSubtitle"
+        android:focusable="false"
+        android:cursorVisible="false"
+        android:clickable="true"
+        app:layout_constraintTop_toBottomOf="@id/background_header"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- SCROLL KATEGORI -->
+    <!-- CHIP GROUP -->
     <HorizontalScrollView
         android:id="@+id/scrollKategori"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="12dp"
         android:scrollbars="none"
         app:layout_constraintTop_toBottomOf="@id/edtSearch"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <LinearLayout
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupKategori"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            app:singleLine="true"
+            app:singleSelection="true"
+            app:selectionRequired="true"
+            app:chipSpacingHorizontal="6dp">
 
-            <!-- KATEGORI SEMUA -->
-            <Button
-                android:id="@+id/btnSemua"
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipSemua"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:layout_width="wrap_content"
-                android:layout_height="42dp"
+                android:layout_height="wrap_content"
                 android:text="Semua"
-                android:textAllCaps="false"
-                android:textSize="11sp"
-                android:fontFamily="@font/poppins_semibold"
-                android:backgroundTint="@color/purple" />
+                android:checked="true"
+                android:textColor="@color/white"
+                app:checkedIconVisible="false"
+                app:chipBackgroundColor="@color/purple" />
 
-            <!-- KATEGORI POP-UP MARKET -->
-            <Button
-                android:id="@+id/btnMarket"
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipMarket"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:layout_width="wrap_content"
-                android:layout_height="42dp"
-                android:layout_marginStart="5dp"
+                android:layout_height="wrap_content"
                 android:text="Pop-up Market"
-                android:textAllCaps="false"
-                android:textSize="11sp"
-                android:fontFamily="@font/poppins_semibold"
-                android:backgroundTint="@color/light_purple" />
+                android:textColor="@color/dark_purple"
+                app:checkedIconVisible="false"
+                app:chipBackgroundColor="@color/light_purple" />
 
-            <!-- KATEGORI WORKSHOP -->
-            <Button
-                android:id="@+id/btnWorkshop"
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipWorkshop"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:layout_width="wrap_content"
-                android:layout_height="42dp"
-                android:layout_marginStart="5dp"
+                android:layout_height="wrap_content"
                 android:text="Workshop"
-                android:textAllCaps="false"
-                android:textSize="11sp"
-                android:fontFamily="@font/poppins_semibold"
-                android:backgroundTint="@color/light_purple" />
+                android:textColor="@color/dark_purple"
+                app:checkedIconVisible="false"
+                app:chipBackgroundColor="@color/light_purple" />
 
-            <!-- KATEGORI MUSIK -->
-            <Button
-                android:id="@+id/btnMusik"
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipMusik"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:layout_width="wrap_content"
-                android:layout_height="42dp"
-                android:layout_marginStart="5dp"
+                android:layout_height="wrap_content"
                 android:text="Musik"
-                android:textAllCaps="false"
-                android:textSize="11sp"
-                android:fontFamily="@font/poppins_semibold"
-                android:backgroundTint="@color/light_purple" />
+                android:textColor="@color/dark_purple"
+                app:checkedIconVisible="false"
+                app:chipBackgroundColor="@color/light_purple" />
 
-        </LinearLayout>
+        </com.google.android.material.chip.ChipGroup>
     </HorizontalScrollView>
 
-    <!-- TOMBOL LIHAT SEMUA KATEGORI (BARU) -->
+    <!-- LIHAT SEMUA KATEGORI -->
     <TextView
         android:id="@+id/txtLihatSemua"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="6dp"
         android:layout_marginEnd="20dp"
         android:text="Lihat Semua Kategori →"
         android:textColor="@color/purple"
@@ -156,12 +169,12 @@
         app:layout_constraintTop_toBottomOf="@id/scrollKategori"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- TEMPAT MENAMPILKAN FRAGMENT EVENT -->
+    <!-- FRAGMENT EVENT -->
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintTop_toBottomOf="@id/txtLihatSemua"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

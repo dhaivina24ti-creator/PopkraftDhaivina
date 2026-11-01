@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="190dp"
+    android:viewportWidth="360"
+    android:viewportHeight="190">
+
+    <!-- Header utama berwarna ungu -->
+    <path
+        android:fillColor="#623BFF"
+        android:pathData="M0,0 L360,0 L360,145 C260,180 110,120 0,165 Z" />
+
+    <!-- Dekorasi lingkaran kanan -->
+    <path
+        android:fillColor="#805DFF"
+        android:pathData="M305,0 a65,65 0,1 0,130 0 a65,65 0,1 0,-130 0" />
+
+    <!-- Dekorasi lingkaran kiri -->
+    <path
+        android:fillColor="#7650F0"
+        android:pathData="M-30,0 a55,55 0,1 0,110 0 a55,55 0,1 0,-110 0" />
+
+</vector>

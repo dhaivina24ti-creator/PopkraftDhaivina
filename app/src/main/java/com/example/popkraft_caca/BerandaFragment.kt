@@ -24,12 +24,13 @@ class BerandaFragment : Fragment() {
 
     private var kategoriAktif = 0
 
-    // Menerima pilihan kategori dari KategoriActivity
-    private val pilihKategoriLauncher = registerForActivityResult(
+    // Menerima pilihan dari halaman Kategori Event
+    private val kategoriLauncher = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
     ) { result ->
 
-        if (result.resultCode == Activity.RESULT_OK) {
+        if (result.resultCode == Activity.RESULT_OK && _binding != null) {
+
             val kategori = result.data
                 ?.getStringExtra("kategori_dipilih")
 
@@ -46,6 +47,7 @@ class BerandaFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
         _binding = FragmentBerandaBinding.inflate(
             inflater,
             container,
@@ -61,49 +63,64 @@ class BerandaFragment : Fragment() {
     ) {
         super.onViewCreated(view, savedInstanceState)
 
-        if (savedInstanceState != null) {
-            kategoriAktif = savedInstanceState.getInt(
-                "kategori_aktif",
-                0
+        // Mengembalikan kategori yang terakhir aktif
+        kategoriAktif = savedInstanceState?.getInt(
+            "kategori_aktif",
+            kategoriAktif
+        ) ?: kategoriAktif
+
+        // Menampilkan event berdasarkan kategori aktif
+        tampilkanKategori(kategoriAktif)
+
+        // =====================================
+        // BARU: MEMBUKA HALAMAN PENCARIAN EVENT
+        // =====================================
+        binding.edtSearch.setOnClickListener {
+
+            val intent = Intent(
+                requireContext(),
+                CariEventActivity::class.java
             )
+
+            startActivity(intent)
         }
 
-        if (childFragmentManager.findFragmentById(
-                binding.fragmentContainer.id
-            ) == null
-        ) {
-            tampilkanKategori(kategoriAktif)
-        } else {
-            ubahWarnaKategori(kategoriAktif)
-        }
 
-        binding.btnSemua.setOnClickListener {
-            tampilkanKategori(0)
-        }
+        // CHIP GROUP FILTER KATEGORI
+        binding.chipGroupKategori
+            .setOnCheckedStateChangeListener { _, checkedIds ->
+                when (checkedIds.firstOrNull()) {
+                    R.id.chipSemua -> {
+                        tampilkanKategori(0)
+                    }
+                    R.id.chipMarket -> {
+                        tampilkanKategori(1)
+                    }
+                    R.id.chipWorkshop -> {
+                        tampilkanKategori(2)
+                    }
+                    R.id.chipMusik -> {
+                        tampilkanKategori(3)
+                    }
+                }
+            }
 
-        binding.btnMarket.setOnClickListener {
-            tampilkanKategori(1)
-        }
-
-        binding.btnWorkshop.setOnClickListener {
-            tampilkanKategori(2)
-        }
-
-        binding.btnMusik.setOnClickListener {
-            tampilkanKategori(3)
-        }
-
-        // Membuka halaman ListView kategori
+        // =====================================
+        // MEMBUKA HALAMAN SEMUA KATEGORI
+        // =====================================
         binding.txtLihatSemua.setOnClickListener {
+
             val intent = Intent(
                 requireContext(),
                 KategoriActivity::class.java
             )
 
-            pilihKategoriLauncher.launch(intent)
+            kategoriLauncher.launch(intent)
         }
 
-        // Logout
+        // =====================================
+        // TOMBOL LOGOUT
+        // =====================================
         binding.btnLogout.setOnClickListener {
 
             AlertDialog.Builder(requireContext())
@@ -117,6 +134,7 @@ class BerandaFragment : Fragment() {
                             Context.MODE_PRIVATE
                         )
 
+                    // Menghapus status login
                     pref.edit().clear().apply()
 
                     val intent = Intent(
@@ -135,63 +153,103 @@ class BerandaFragment : Fragment() {
         }
     }
 
+    // =====================================
+    // MENAMPILKAN FRAGMENT BERDASARKAN KATEGORI
+    // =====================================
     private fun tampilkanKategori(pilihan: Int) {
+
+        val chipId = when (pilihan) {
+            1 -> R.id.chipMarket
+            2 -> R.id.chipWorkshop
+            3 -> R.id.chipMusik
+            else -> R.id.chipSemua
+        }
+
+        // Menandai Chip yang sedang dipilih
+        if (binding.chipGroupKategori.checkedChipId != chipId) {
+            binding.chipGroupKategori.check(chipId)
+        }
+
+        // Mengubah warna Chip aktif
+        ubahWarnaChip(pilihan)
+
+        // Periksa Fragment yang sekarang ditampilkan
+        val fragmentLama = childFragmentManager
+            .findFragmentById(binding.fragmentContainer.id)
+
+        // Jangan mengganti Fragment jika sudah sesuai
+        if (kategoriAktif == pilihan && fragmentLama != null) {
+            return
+        }
 
         kategoriAktif = pilihan
 
         val fragment = when (pilihan) {
+
             1 -> DuaFragment()
+
             2 -> TigaFragment()
+
             3 -> EmpatFragment()
+
             else -> SatuFragment()
         }
 
+        // Mengganti daftar event pada Beranda
         childFragmentManager.beginTransaction()
-            .replace(binding.fragmentContainer.id, fragment)
+            .replace(
+                binding.fragmentContainer.id,
+                fragment
+            )
             .commit()
-
-        ubahWarnaKategori(pilihan)
     }
 
-    private fun ubahWarnaKategori(pilihan: Int) {
+    // =====================================
+    // MENGUBAH WARNA CHIP KATEGORI
+    // =====================================
+    private fun ubahWarnaChip(pilihan: Int) {
 
-        val tombol = listOf(
-            binding.btnSemua,
-            binding.btnMarket,
-            binding.btnWorkshop,
-            binding.btnMusik
+        val daftarChip = listOf(
+            binding.chipSemua,
+            binding.chipMarket,
+            binding.chipWorkshop,
+            binding.chipMusik
         )
 
-        tombol.forEachIndexed { index, button ->
+        daftarChip.forEachIndexed { index, chip ->
 
-            val backgroundColor = if (index == pilihan) {
-                R.color.purple
-            } else {
-                R.color.light_purple
-            }
+            val warnaBackground =
+                if (index == pilihan) {
+                    R.color.purple
+                } else {
+                    R.color.light_purple
+                }
 
-            val textColor = if (index == pilihan) {
-                R.color.white
-            } else {
-                R.color.dark_purple
-            }
+            val warnaTeks =
+                if (index == pilihan) {
+                    R.color.white
+                } else {
+                    R.color.dark_purple
+                }
 
-            button.backgroundTintList =
+            chip.chipBackgroundColor =
                 ColorStateList.valueOf(
-                    requireContext().getColor(backgroundColor)
+                    requireContext().getColor(warnaBackground)
                 )
 
-            button.setTextColor(
-                requireContext().getColor(textColor)
+            chip.setTextColor(
+                requireContext().getColor(warnaTeks)
             )
         }
     }
 
+    // Menyimpan kategori saat layar dibuat ulang
     override fun onSaveInstanceState(outState: Bundle) {
         outState.putInt("kategori_aktif", kategoriAktif)
         super.onSaveInstanceState(outState)
     }
 
+    // Membersihkan View Binding
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
